@@ -3,16 +3,18 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="./img/logo/youtube-logo.png" />
-        <link rel="stylesheet" href="./img/font-awesome-4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="icon" type="image/png" href="./src/img/logo/youtube-logo.png" />
+        <link rel="stylesheet" href="./src/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/styles.css" />
         <title>YouTube</title>
     </head>
     <body>
         <nav>
             <div class="nav-left f-left">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-                <img src="./img/logo/youtube-logo.png" width="30px" height="20px" />
+                <div class="hamburger-menu">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <img src="./src/img/logo/youtube-logo.png" width="30px" height="20px" />
                 <span>YouTube<sup>IN</sup></span>
             </div>
 
@@ -34,7 +36,7 @@
 
         <aside>
             <div class="sidebar-mini d-none">
-                <div class="option active-option" onclick="selectOption(this)">
+                <div class="option active-option" data-id="home-section" onclick="selectOption(this)">
                     <div class="option-icon">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </div>
@@ -63,7 +65,7 @@
 
             <div class="side-drawer">
                 <section>
-                    <div class="option active-option" onclick="selectOption(this)">
+                    <div class="option active-option" data-id="home-section" onclick="selectOption(this)">
                         <div class="option-icon">
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </div>
@@ -85,7 +87,7 @@
                     <hr />
 
                     <div class="option" onclick="selectOption(this)">
-                        <div class="option-name heading">You</div>
+                        <div class="option-name ml-18">You</div>
                         <div class="option-icon">
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </div>
@@ -125,10 +127,59 @@
 
                     <div class="heading">Subscription</div>
                     <div class="option" onclick="selectOption(this)">
-                        <div class="option-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
                         </div>
-                        <div class="option-name">home</div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon channel-avatar">
+                            <!-- <i class="fa" aria-hidden="true"></i> -->
+                            <img src="" alt="" srcset="" />
+                        </div>
+                        <div class="option-name">channel name</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">show 33 more</div>
                     </div>
 
                     <hr />
@@ -136,22 +187,102 @@
                     <div class="heading">Explore</div>
                     <div class="option" onclick="selectOption(this)">
                         <div class="option-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <i class="fa fa-fire" aria-hidden="true"></i>
                         </div>
-                        <div class="option-name">home</div>
+                        <div class="option-name">Trending</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Shopping</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-music" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Music</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Films</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-bullseye" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Live</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">gaming</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">News</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Sports</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Learning</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Fashion & beauty</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <i class="fa fa-podcast" aria-hidden="true"></i>
+                        </div>
+                        <div class="option-name">Podcasts</div>
                     </div>
 
                     <hr />
 
                     <div class="heading">More from YouTube</div>
                     <div class="option" onclick="selectOption(this)">
-                        <div class="option-name">home</div>
                         <div class="option-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+                            <img class="option-icon-img" src="./src/img/logo/youtube-logo.png" alt="yt-logo" width="24px" />
                         </div>
-                        <div class="option-name">home</div>
+                        <div class="option-name">YouTube Premium</div>
                     </div>
-
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+                            <img class="option-icon-img" src="./src/img/logo/youtube-studio.png" alt="yt-studio" width="24px" />
+                        </div>
+                        <div class="option-name">YouTube Studio</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+                            <img class="option-icon-img" src="./src/img/logo/youtube-music.png" alt="yt-music" width="24px" />
+                        </div>
+                        <div class="option-name">YouTube Music</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this)">
+                        <div class="option-icon">
+                            <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+                            <img class="option-icon-img" src="./src/img/logo/youtube-kids.png" alt="yt-kids" width="24px" />
+                        </div>
+                        <div class="option-name">YouTube kids</div>
+                    </div>
                     <hr />
 
                     <div class="option" onclick="selectOption(this)">
@@ -181,25 +312,48 @@
                 </section>
 
                 <div class="footer-sm">
-                    <p>
-                        AboutPressCopyrightContact usCreatorAdvertiseDevelopers TermsPrivacyPolicy & SafetyHow
-                        YouTube worksTest new features
-                    </p>
+                    <p>About Press Copyright Contact us Creator Advertise Developers</p>
+                    <p>Terms Privacy Policy & Safety How YouTube worksTest new features</p>
+                    <span class="copyright-line"> &copy; <span class="current-year"></span> Google LLC </span>
                 </div>
             </div>
             <!-- SIDE-DRAWER END -->
         </aside>
 
         <main>
-            <div class="pill-group">
-                <span class="pill active-pill">All</span>
-                <span class="pill">Music</span>
-                <span class="pill">Computer Programming</span>
-                <span class="pill">Live</span>
-                <span class="pill">Motivation</span>
-                <span class="pill">Podcast</span>
-                <span class="pill">Cricket</span>
-            </div>
+            <section class="" id="home-section">
+                <div class="filter-btns-group">
+                    <span class="filter-btn active-filter-btn">All</span>
+                    <span class="filter-btn">Music</span>
+                    <span class="filter-btn">Computer Programming</span>
+                    <span class="filter-btn">Live</span>
+                    <span class="filter-btn">Motivation</span>
+                    <span class="filter-btn">Podcast</span>
+                    <span class="filter-btn">Cricket</span>
+                </div>
+
+                <div class="video-container"></div>
+            </section>
+
+            <section class="d-none" id="shorts-section">Shorts</section>
+            <section class="d-none" id="subscription-section">Subscription</section>
+            <section class="d-none" id="you-section">YOU</section>
+            <section class="d-none" id="your-channel-section">Your Channel</section>
+            <section class="d-none" id="history-section">History</section>
+            <section class="d-none" id="watch-later-section">watch-later-section</section>
+            <section class="d-none" id="channel-section">channel-section</section>
+            <section class="d-none" id="trending-section">trending-section</section>
+            <section class="d-none" id="shopping-section">shopping-section</section>
+            <section class="d-none" id="Music-section">Music-section</section>
+            <section class="d-none" id="Films-section">Films-section</section>
+            <section class="d-none" id="Live-section">Live-section</section>
+            <section class="d-none" id="gaming-section">gaming-section</section>
+            <section class="d-none" id="news-section">news-section</section>
+            <section class="d-none" id="sports-section">sports-section</section>
+            <section class="d-none" id="learning-section">learning-section</section>
+            <section class="d-none" id="fashion-beauty-section">fashion-beauty-section</section>
+            <section class="d-none" id="podcasts-section">podcasts-section</section>
+            <section class="d-none" id="gaming-section">gaming-section</section>
         </main>
 
         <script type="text/javascript" src="scripts.js" defer></script>

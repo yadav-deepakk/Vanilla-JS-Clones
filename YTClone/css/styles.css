@@ -1,0 +1,376 @@
+@font-face {
+    font-family: "Agbalumo";
+    src: url(../src/fonts/Agbalumo/Agbalumo-Regular.ttf);
+    font-weight: bold;
+}
+
+.fa {
+    color: #f3f3f3;
+    scale: 1.4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+    visibility: hidden;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.ml-18{
+    margin-left: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/*--------------------------
+        NAV BAR
+--------------------------*/
+nav {
+    width: 100vw;
+    height: 56px;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    margin-left: 8px;
+    width: fit-content;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-left .hamburger-menu {
+    margin-left: 8px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.nav-left .hamburger-menu:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-left .hamburger-menu:active {
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.nav-left .hamburger-menu .fa-bars {
+    cursor: pointer;
+}
+
+.nav-left img {
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.nav-left span {
+    margin-left: 1px;
+    color: #f3f3f3;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    font-family: "Agbalumo", "Roboto", "Arial", sans-serif;
+    cursor: pointer;
+}
+
+.nav-left span sup {
+    margin: 0px 0px 0px 4px;
+    font-size: 10px;
+    font-weight: 300;
+    color: #e8e8e8;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.nav-center {
+    width: fit-content;
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-search {
+    scale: 1.1;
+}
+
+.search-bar .fa-search {
+    color: #e8e8e8;
+    opacity: 0.8;
+    transform: translateX(36px);
+}
+
+.search-bar input {
+    padding-left: 48px;
+    width: 42vw;
+    height: 32px;
+    font-size: 16px;
+    caret-color: #f3f3f3;
+    outline: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 18px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.search-bar input:focus {
+    color: #f3f3f3;
+    outline: 1px solid rgba(0, 100, 255, .75);
+    border: 1px solid transparent;
+}
+
+.fa-microphone {
+    padding: 8px 11px;
+    scale: 1.1;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.fa-microphone:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.fa-microphone:active {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.nav-right {
+    margin-right: 32px;
+    width: 180px;
+    /*    background-color: darkcyan;*/
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.nav-right .fa {
+    padding: 9px 10px;
+    scale: 1.1;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-right .fa:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-right .fa:active {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+
+/*--------------------------
+        ASIDE
+--------------------------*/
+aside {
+    float: left;
+    height: 92vh;
+    color: #f3f3f3;
+    /*    background-color: darkcyan;*/
+    overflow-y: auto;
+}
+
+/* Firefox */
+aside {
+    scrollbar-width: 7px;
+    scrollbar-color: transparent;
+}
+
+/* WebKit (Chrome, Safari) */
+aside::-webkit-scrollbar {
+    width: 8px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+aside:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.40);
+}
+
+/* ---- Side Bar Mini ---- */
+.sidebar-mini {
+    float: left;
+    padding: 4px 2px;
+    width: fit-content;
+}
+
+.sidebar-mini .option {
+    padding: 16px 2px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    /*    background-color: red;*/
+}
+
+.sidebar-mini .option .option-icon {
+    display: block;
+    scale: 1.2;
+}
+
+.fa-play-circle-o {
+    scale: 1.4
+}
+
+.sidebar-mini .option .option-name {
+    margin-top: 4px;
+    display: block;
+    text-transform: capitalize;
+    font-size: 11px;
+}
+
+/* ----- Side Drawer ----- */
+aside .side-drawer {
+    padding: 0px 8px;
+    width: 15vw;
+}
+
+.side-drawer section {
+    margin-top: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.side-drawer section div.heading {
+    margin-left: 16px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.side-drawer section hr {
+    margin: 14px 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 95%;
+    height: 1px;
+    border-width: 0px;
+}
+
+.side-drawer .option {
+    height: 40px;
+    /*    background-color: cyan;*/
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.side-drawer .option .option-icon {
+    margin-left: 18px;
+    width: 16px;
+    height: 16px;
+}
+
+.side-drawer .option .option-icon.channel-avatar{
+    margin-left: 14px;
+    margin-right: -4px;
+    width: 24px;
+    height: 24px;
+    background-color: skyblue;
+    border-radius: 12px;
+
+}
+
+.option-icon .fa-angle-right{
+    margin-left: -24px;
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.side-drawer .option div.option-name {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.channel-avatar img {
+    background-color: #f3f3f3;
+}
+
+.active-option {
+    background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.active-option:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.footer-sm p {
+    margin-left: 16px;
+    padding: 4px 0px 8px 0px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-sm p:nth-child(1) {
+    word-spacing: 4px;
+}
+
+.footer-sm span.copyright-line {
+    margin-left: 16px;
+    padding: 4px 0px 8px 0px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/*--------------------------
+        MAIN
+--------------------------*/
+main {
+    float: left;
+    padding: 16px;
+    color: #e8e8e8;
+    overflow-x: scroll;
+}
+
+main section {
+    color: #e8e8e8;
+}
